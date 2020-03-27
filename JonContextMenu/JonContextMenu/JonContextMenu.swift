@@ -150,6 +150,7 @@ import UIKit.UIGestureRecognizerSubclass
             }
             self.window     = window
             self.properties = properties
+            
             addTarget(self, action: #selector(setupTouchAction))
         }
         

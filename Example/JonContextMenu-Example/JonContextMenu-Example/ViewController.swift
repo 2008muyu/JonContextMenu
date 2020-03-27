@@ -50,7 +50,7 @@ class ExampleCell: UITableViewCell{
     func configureCell(_ index:Int, title:String, contextMenu:JonContextMenu){
         self.title.text  = title
         self.squareTitle.text  = "\(index)"
-        self.addGestureRecognizer(contextMenu.build())
+        self.addGestureRecognizer(contextMenu.buildTapGesture())
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

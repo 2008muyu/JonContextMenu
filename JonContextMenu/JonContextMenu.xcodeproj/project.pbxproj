@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CCB4099242CADDC00BE1CFF /* JonContextMenuGestureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4098242CADDC00BE1CFF /* JonContextMenuGestureBuilder.swift */; };
 		7438C02E2146277500F313E2 /* JonContextMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 7438C02C2146277500F313E2 /* JonContextMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7438C036214627C100F313E2 /* JonContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438C035214627C100F313E2 /* JonContextMenuView.swift */; };
 		7438C038214627D400F313E2 /* JonContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438C037214627D400F313E2 /* JonContextMenu.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CCB4098242CADDC00BE1CFF /* JonContextMenuGestureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JonContextMenuGestureBuilder.swift; sourceTree = "<group>"; };
 		7438C0292146277500F313E2 /* JonContextMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JonContextMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7438C02C2146277500F313E2 /* JonContextMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JonContextMenu.h; sourceTree = "<group>"; };
 		7438C02D2146277500F313E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				7438C03B2146280B00F313E2 /* JonItem.swift */,
 				7438C037214627D400F313E2 /* JonContextMenu.swift */,
 				7438C035214627C100F313E2 /* JonContextMenuView.swift */,
+				4CCB4098242CADDC00BE1CFF /* JonContextMenuGestureBuilder.swift */,
 			);
 			path = JonContextMenu;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7438C036214627C100F313E2 /* JonContextMenuView.swift in Sources */,
+				4CCB4099242CADDC00BE1CFF /* JonContextMenuGestureBuilder.swift in Sources */,
 				7438C038214627D400F313E2 /* JonContextMenu.swift in Sources */,
 				7438C0412146296800F313E2 /* UIView+Utils.swift in Sources */,
 				7438C03C2146280B00F313E2 /* JonItem.swift in Sources */,

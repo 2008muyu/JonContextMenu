@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
+typealias ClickAction = (_ id : NSInteger)->Void
+
 @objc open class JonItem:UIView {
     
     private static let vWidth  = 45
@@ -16,7 +18,9 @@ import Foundation
     
     /// The id of the item
     open var id:NSInteger?
-
+    
+    var onClickAction : ClickAction!
+    
     /// The title of the item
     @objc open var title:String = ""
     
@@ -43,6 +47,7 @@ import Foundation
         button.fullCircle = true
         button.addDropShadow()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(onClick), for: .touchDown)
         return button
     }()
     
@@ -108,5 +113,11 @@ import Foundation
             icon.tintColor = nil
         }
         button.backgroundColor = itemColour
+    }
+    
+    @objc private func onClick() -> Void {
+        if let click = onClickAction {
+            click(id ?? -1)
+        }
     }
 }

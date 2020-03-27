@@ -350,3 +350,28 @@ class JonContextMenuView:UIView {
         }
     }
 }
+
+extension JonContextMenuView {
+    convenience init(_ properties:JonContextMenu, touchPoint:CGPoint, isTap : Bool) {
+        self.init(properties, touchPoint: touchPoint)
+        if(isTap){
+            touchPointView.removeFromSuperview()
+        }
+    }
+    
+    func activate(_ item:JonItem, completed :  @escaping (Bool) -> Void){
+        
+        item.isActive = true
+        item.setItemColorTo(properties.buttonsActiveColor, iconColor: properties.iconsActiveColor)
+
+        let newX = (item.wrapper.center.x + CGFloat(__cospi(Double(item.angle/180))) * 25)
+        let newY = (item.wrapper.center.y + CGFloat(__sinpi(Double(item.angle/180))) * 25)
+        
+        showLabel(with: item.title)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.8, options: [], animations: {
+            self.label.alpha = 1.0
+            item.wrapper.center    = CGPoint(x: newX, y: newY)
+            item.wrapper.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }, completion: completed)
+    }
+}
